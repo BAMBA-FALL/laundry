@@ -1,0 +1,66 @@
+/* Styles de base pour le header */
+header {
+  background-color: #3b82f6; /* Couleur bleue */
+  color: white;
+  padding: 1rem;
+  height: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Styles pour la navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects */
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Boutons Connexion et Inscription */
+nav ul li a.bg-blue-600 {
+  background-color: #2563eb; /* Couleur bleue foncée */
+  border-radius: 0.25rem;
+}
+
+nav ul li a.bg-blue-600:hover {
+  background-color: #1d4ed8; /* Couleur bleue encore plus foncée */
+}
+
+nav ul li a.bg-green-500 {
+  background-color: #22c55e; /* Couleur verte */
+  border-radius: 0.25rem;
+}
+
+nav ul li a.bg-green-500:hover {
+  background-color: #16a34a; /* Couleur verte foncée */
+}

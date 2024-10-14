@@ -1,0 +1,113 @@
+/* Styles généraux */
+.container {
+    max-width: 1280px; /* Limite la largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 0 1rem; /* Ajoute un espacement horizontal */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #3b82f6, #10b981); /* Dégradé de fond */
+    color: white; /* Couleur du texte */
+    padding: 5rem 0; /* Espacement vertical */
+    text-align: center; /* Alignement centré du texte */
+    display: flex; /* Flexbox pour la disposition */
+    flex-direction: column; /* Orientation en colonne */
+    align-items: center; /* Centre horizontalement les éléments */
+}
+
+.hero-section h2 {
+    font-size: 2.25rem; /* Taille du titre */
+    font-weight: bold; /* Titre en gras */
+    margin-bottom: 1rem; /* Espace sous le titre */
+}
+
+.hero-section p {
+    margin-bottom: 2rem; /* Espace sous le paragraphe */
+    font-size: 1.125rem; /* Taille du texte */
+}
+
+.cta-button {
+    background-color: #ef4444; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    padding: 0.75rem 1.5rem; /* Espacement interne */
+    border-radius: 0.25rem; /* Coins arrondis */
+    text-decoration: none; /* Enlève la décoration de texte */
+    display: inline-block; /* Traite le lien comme un bouton */
+    transition: background-color 0.3s ease; 
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.services-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.service-card-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 2rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #10b981; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 4rem 0; /* Espacement vertical */
+    text-align: center; /* Alignement centré du texte */
+}
+
+.cta-section .container {
+    display: flex; /* Flexbox pour le conteneur CTA */
+    flex-direction: column; /* Orientation en colonne */
+    align-items: center; /* Centre horizontalement les éléments */
+}
+
+.cta-section h3 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    max-width: 600px; /* Pour garder le texte à une largeur raisonnable */
+}
+
+.cta-section .cta-button {
+    background-color: #ef4444; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    padding: 0.75rem 1.5rem; /* Espacement interne */
+    border-radius: 0.25rem; /* Coins arrondis */
+    text-decoration: none; /* Enlève la décoration de texte */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.cta-section .cta-button:hover {
+    background-color: #dc2626; /* Couleur du bouton au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 1.875rem; /* Ajuste la taille du titre */
+    }
+
+    .cta-section h3 {
+        font-size: 1.5rem; /* Ajuste la taille du sous-titre */
+    }
+
+    .service-card-grid {
+        grid-template-columns: 1fr; /* Colonne unique sur petit écran */
+    }
+}

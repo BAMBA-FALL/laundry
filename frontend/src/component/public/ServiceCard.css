@@ -1,0 +1,36 @@
+/* Styles pour ServiceCard */
+
+/* Container de la carte */
+.service-card {
+    background-color: white;
+    padding: 1.5rem; /* Espacement interne */
+    border-radius: 0.5rem; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner un effet de relief */
+    text-align: center; 
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease;  */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px); /* Légère montée au survol */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ombre plus intense au survol */
+  }
+  
+  /* Style de l'icône */
+  .service-card .icon {
+    font-size: 2.5rem; /* Taille de l'icône */
+    margin-bottom: 1rem;
+  }
+  
+  /* Titre de la carte */
+  .service-card h4 {
+    font-size: 1.25rem; /* Taille de la police du titre */
+    font-weight: 600; /* Titre semi-gras */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Description */
+  .service-card p {
+    color: #4a5568; /* Couleur grise pour la description */
+    font-size: 1rem;
+  }
+  

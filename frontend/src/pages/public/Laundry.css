@@ -1,0 +1,25 @@
+.laundry-status-container {
+    display: flex;
+    justify-content: space-around; /* Espace entre les cartes */
+    align-items: center;
+    padding: 20px; /* Ajoute un peu d'espace autour des cartes */
+    flex-wrap: wrap; /* Permet le passage à la ligne si l'espace est insuffisant */
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #eaeaea; /* Bordure légère pour la carte */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre pour donner de la profondeur */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centre le texte */
+    width: 300px; /* Largeur fixe pour les cartes */
+    margin: 10px; /* Espacement externe entre les cartes */
+  }
+  
+  .animation-title {
+    margin-top: 10px; /* Espacement au-dessus du titre */
+    font-size: 1.2rem; /* Taille de police du titre */
+    color: #333; /* Couleur du texte du titre */
+  }
+  

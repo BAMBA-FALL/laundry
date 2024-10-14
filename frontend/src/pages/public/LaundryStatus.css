@@ -1,0 +1,64 @@
+.laundry-status-container {
+  display: flex;                  /* Utilise flexbox pour l'alignement horizontal */
+  justify-content: center;        /* Centre les cartes horizontalement */
+  align-items: center;            /* Centre les cartes verticalement */
+  gap: 20px;                     /* Ajoute un espacement entre les cartes */
+  margin-top: 40px;              /* Ajoute un espacement au-dessus */
+}
+
+.laundry-status-card {
+  border-radius: 12px;            /* Coins arrondis */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: transform 0.3s;     /* Animation lors du survol */
+  text-align: center;              /* Centre le texte dans chaque carte */
+  margin: 30px;
+}
+
+.laundry-status-card:hover {
+  transform: scale(1.02);         /* Effet de zoom léger */
+}
+
+.animation-title {
+  margin-top: 20px;               /* Ajoute un espacement au-dessus du titre */
+  font-size: 24px;                /* Ajuste la taille de la police selon tes besoins */
+  color: #333;                    /* Change la couleur du texte si nécessaire */
+}
+
+  .status-image {
+    width: 40px; /* Taille de l'icône */
+    height: 40px;
+    border-radius: 50%; /* Icône arrondie */
+  }
+  
+  .image-row {
+    margin-top: 20px;
+  }
+  
+  .image-col {
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .laundry-image {
+    border-radius: 8px; /* Coins arrondis des images */
+    transition: transform 0.3s; /* Animation lors du survol */
+  }
+  
+  .laundry-image:hover {
+    transform: scale(1.05); /* Zoom lors du survol */
+  }
+  
+
+  .empty-basket-animation {
+    display: flex;                   /* Utilise flexbox pour centrer le contenu */
+    flex-direction: column;          /* Aligne les éléments verticalement */
+    justify-content: center;         /* Centre le contenu verticalement */
+    align-items: center;             /* Centre le contenu horizontalement */
+    height: 100vh;                  /* Prend toute la hauteur de la fenêtre */
+  }
+  
+  .animation-title {
+    margin-top: 20px;               /* Ajoute un espacement au-dessus du titre */
+    font-size: 24px;                /* Ajuste la taille de la police selon tes besoins */
+    color: #333;                    /* Change la couleur du texte si nécessaire */
+  }
+  
