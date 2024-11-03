@@ -1,28 +1,18 @@
 trigger:
-- main  # Branche surveillée
+- main  # Branche déclencheur (ajustez selon vos besoins)
 
 pool:
-  vmImage: ubuntu-latest
+  name: 'monpool'  # Remplacez par le nom de votre pool d'agents auto-hébergé
+  demands: 
+    - agent.name -equals DESKTOP-7VGJL6D  # Ajoutez cette ligne si vous voulez spécifier un agent précis
 
 steps:
-# Installer Node.js
 - task: NodeTool@0
   inputs:
-    versionSpec: '20.x'
+    versionSpec: '20.x'  # Spécifiez la version de Node.js utilisée
   displayName: 'Install Node.js'
 
-# Construire le frontend React
 - script: |
-    cd frontend  # Naviguez dans le dossier du frontend
     npm install
     npm run build
-  displayName: 'Install and build React app'
-
-# Construire le backend Node.js/Express
-- script: |
-    cd ../backend  # Naviguez dans le dossier du backend
-    npm install
-    npm run build  # Adaptez cette commande selon les besoins (par exemple `npm start` si aucune étape de build n'est requise)
-  displayName: 'Install and build Node.js backend'
-
-# Ajouter des étapes de test ou de déploiement si nécessaire
+  displayName: 'npm install and build'
