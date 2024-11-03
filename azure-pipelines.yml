@@ -1,18 +1,25 @@
 trigger:
-- main  # Branche déclencheur (ajustez selon vos besoins)
+- main  # Branche déclencheur (ajustez si nécessaire)
 
 pool:
-  name: 'monpool'  # Remplacez par le nom de votre pool d'agents auto-hébergé
-  demands: 
-    - agent.name -equals DESKTOP-7VGJL6D  # Ajoutez cette ligne si vous voulez spécifier un agent précis
+  name: 'monpool'  # Remplacez par le nom de votre pool d'agents
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '20.x'  # Spécifiez la version de Node.js utilisée
+    versionSpec: '20.x'
   displayName: 'Install Node.js'
 
+# Pour le frontend
 - script: |
+    cd frontend
     npm install
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'npm install and build frontend'
+
+# Pour le backend
+- script: |
+    cd backend
+    npm install
+    npm start  # ou npm run build selon votre besoin pour le backend
+  displayName: 'npm install and start backend'
