@@ -1,0 +1,28 @@
+trigger:
+- main  # Branche surveillée
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+# Installer Node.js
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+# Construire le frontend React
+- script: |
+    cd frontend  # Naviguez dans le dossier du frontend
+    npm install
+    npm run build
+  displayName: 'Install and build React app'
+
+# Construire le backend Node.js/Express
+- script: |
+    cd ../backend  # Naviguez dans le dossier du backend
+    npm install
+    npm run build  # Adaptez cette commande selon les besoins (par exemple `npm start` si aucune étape de build n'est requise)
+  displayName: 'Install and build Node.js backend'
+
+# Ajouter des étapes de test ou de déploiement si nécessaire
